@@ -1,0 +1,6 @@
+{
+  "name": "Driveo Exclusive",
+  "description": "Fixed-price private chauffeur travel in London, Paris, Bulgaria and Dubai with vetted drivers and immaculate cars.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
