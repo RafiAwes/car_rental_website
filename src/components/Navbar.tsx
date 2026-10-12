@@ -23,14 +23,14 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#12100e]/95 backdrop-blur-md transition-colors duration-200">
-      <div className="mx-auto flex h-20 w-full max-w-[96rem] items-center justify-between gap-8 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 w-full max-w-[96rem] items-center justify-between gap-3 sm:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8">
         {/* Zone 1: Brand Wordmark (Single text element in display face) */}
         <button
           onClick={() => handleNavClick('home')}
-          className="group flex items-center text-left text-xl lg:text-2xl font-serif tracking-tight text-[#f4efe6] transition-opacity hover:opacity-90 whitespace-nowrap shrink-0"
+          className="group flex items-center text-left text-lg sm:text-xl lg:text-2xl font-serif tracking-tight text-[#f4efe6] transition-opacity hover:opacity-90 whitespace-nowrap shrink-0"
         >
           <span className="font-medium tracking-normal text-white">Driveo</span>
-          <span className="ml-1.5 font-light text-[#c4a47c]">Exclusive</span>
+          <span className="ml-1 sm:ml-1.5 font-light text-[#c4a47c]">Exclusive</span>
         </button>
 
         {/* Zone 2: 4-5 concise single-line nav links */}
@@ -121,7 +121,7 @@ export const Navbar: React.FC = () => {
           {/* Primary Action Button */}
           <button
             onClick={() => handleNavClick('booking')}
-            className="flex items-center gap-2 rounded-lg bg-[#c4a47c] px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#12100e] hover:bg-[#dfcaa8] transition-all duration-200 active:scale-98 whitespace-nowrap shrink-0 shadow-[0_0_20px_rgba(196,164,124,0.2)]"
+            className="flex items-center gap-1.5 sm:gap-2 rounded-lg bg-[#c4a47c] px-3 sm:px-4 py-2 sm:py-2.5 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-[#12100e] hover:bg-[#dfcaa8] transition-all duration-200 active:scale-98 whitespace-nowrap shrink-0 shadow-[0_0_20px_rgba(196,164,124,0.2)]"
           >
             <span>{t.nav.requestQuote}</span>
             <ArrowDownRight className="h-3.5 w-3.5" />

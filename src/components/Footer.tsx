@@ -94,7 +94,7 @@ export const Footer: React.FC = () => {
             </div>
 
             {/* Social channels */}
-            <div className="flex items-center gap-3 pt-3">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-3">
               {[
                 { name: 'LinkedIn', url: 'https://www.linkedin.com/company/driveo-exclusive/' },
                 { name: 'Instagram', url: 'https://www.instagram.com/driveoexclusive2023' },
@@ -135,7 +135,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 flex flex-col sm:flex-row items-center justify-between border-t border-white/10 pt-8 gap-4 font-mono text-[11px] uppercase tracking-[0.2em] text-[#b8b1a5]">
+        <div className="mt-16 flex flex-col sm:flex-row items-center justify-between border-t border-white/10 pt-8 gap-4 font-mono text-[11px] uppercase tracking-[0.2em] text-[#b8b1a5] text-center sm:text-left">
           <span>{t.footer.allRightsReserved}</span>
           <span>{t.footer.motto}</span>
         </div>

@@ -146,7 +146,7 @@ export const ConciergeDrawer: React.FC = () => {
                   value={callbackName}
                   onChange={(e) => setCallbackName(e.target.value)}
                   placeholder="Your Name / Executive Office"
-                  className="w-full rounded-lg border border-white/10 bg-[#1c1916] px-3.5 py-2.5 text-xs text-white placeholder-white/30 focus:border-[#c4a47c] focus:outline-none"
+                  className="w-full rounded-lg border border-white/10 bg-[#1c1916] px-3.5 py-2.5 text-base sm:text-xs text-white placeholder-white/30 focus:border-[#c4a47c] focus:outline-none"
                 />
                 <input
                   type="tel"
@@ -154,7 +154,7 @@ export const ConciergeDrawer: React.FC = () => {
                   value={callbackPhone}
                   onChange={(e) => setCallbackPhone(e.target.value)}
                   placeholder="Phone Number (e.g. +44 7911 123456)"
-                  className="w-full rounded-lg border border-white/10 bg-[#1c1916] px-3.5 py-2.5 text-xs text-white placeholder-white/30 focus:border-[#c4a47c] focus:outline-none"
+                  className="w-full rounded-lg border border-white/10 bg-[#1c1916] px-3.5 py-2.5 text-base sm:text-xs text-white placeholder-white/30 focus:border-[#c4a47c] focus:outline-none"
                 />
                 <button
                   type="submit"

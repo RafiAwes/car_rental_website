@@ -107,8 +107,8 @@ export const QuoteCalculator: React.FC = () => {
         </div>
 
         {/* Multi-step progress bar */}
-        <div className="mb-12">
-          <div className="grid grid-cols-4 gap-2 text-center text-xs font-mono uppercase tracking-wider">
+        <div className="mb-10 sm:mb-12">
+          <div className="grid grid-cols-4 gap-1.5 sm:gap-2 text-center text-[10px] sm:text-xs font-mono uppercase tracking-wider">
             {[
               { num: 1, label: t.booking.step1 },
               { num: 2, label: t.booking.step2 },
@@ -117,14 +117,14 @@ export const QuoteCalculator: React.FC = () => {
             ].map((s) => (
               <div
                 key={s.num}
-                className={`border-b-2 pb-3 transition-colors ${
+                className={`border-b-2 pb-2.5 sm:pb-3 transition-colors ${
                   currentStep >= s.num
                     ? 'border-[#c4a47c] text-white font-medium'
                     : 'border-white/10 text-[#b8b1a5]/50'
                 }`}
               >
-                <span className="hidden sm:inline">0{s.num}. </span>
-                {s.label}
+                <span className="sm:hidden">0{s.num}</span>
+                <span className="hidden sm:inline">0{s.num}. {s.label}</span>
               </div>
             ))}
           </div>
@@ -287,11 +287,11 @@ export const QuoteCalculator: React.FC = () => {
               </div>
 
               {/* Next Button */}
-              <div className="pt-6 border-t border-white/10 flex justify-end">
+              <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-end">
                 <button
                   type="button"
                   onClick={handleNextStep}
-                  className="inline-flex items-center gap-2 rounded-lg bg-[#c4a47c] px-6 py-3 text-xs font-semibold uppercase tracking-wider text-[#12100e] hover:bg-[#dfcaa8] transition-all"
+                  className="w-full sm:w-auto justify-center inline-flex items-center gap-2 rounded-lg bg-[#c4a47c] px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#12100e] hover:bg-[#dfcaa8] transition-all active:scale-98"
                 >
                   <span>Select Vehicle & View Estimate</span>
                   <ChevronRight className="h-4 w-4" />
@@ -427,11 +427,11 @@ export const QuoteCalculator: React.FC = () => {
               </div>
 
               {/* Back / Next Buttons */}
-              <div className="pt-6 border-t border-white/10 flex items-center justify-between">
+              <div className="pt-6 border-t border-white/10 flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-3">
                 <button
                   type="button"
                   onClick={handlePrevStep}
-                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-xs text-[#b8b1a5] hover:text-white"
+                  className="w-full sm:w-auto justify-center inline-flex items-center gap-2 rounded-lg border border-white/10 px-5 py-3 text-xs text-[#b8b1a5] hover:text-white transition-all active:scale-98"
                 >
                   <ChevronLeft className="h-4 w-4" />
                   <span>Back to Route</span>
@@ -439,7 +439,7 @@ export const QuoteCalculator: React.FC = () => {
                 <button
                   type="button"
                   onClick={handleNextStep}
-                  className="inline-flex items-center gap-2 rounded-lg bg-[#c4a47c] px-6 py-3 text-xs font-semibold uppercase tracking-wider text-[#12100e] hover:bg-[#dfcaa8] transition-all"
+                  className="w-full sm:w-auto justify-center inline-flex items-center gap-2 rounded-lg bg-[#c4a47c] px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#12100e] hover:bg-[#dfcaa8] transition-all active:scale-98"
                 >
                   <span>Continue to Passenger Details</span>
                   <ChevronRight className="h-4 w-4" />
@@ -549,18 +549,18 @@ export const QuoteCalculator: React.FC = () => {
               </div>
 
               {/* Navigation Buttons */}
-              <div className="pt-6 border-t border-white/10 flex items-center justify-between">
+              <div className="pt-6 border-t border-white/10 flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-3">
                 <button
                   type="button"
                   onClick={handlePrevStep}
-                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-xs text-[#b8b1a5] hover:text-white"
+                  className="w-full sm:w-auto justify-center inline-flex items-center gap-2 rounded-lg border border-white/10 px-5 py-3 text-xs text-[#b8b1a5] hover:text-white transition-all active:scale-98"
                 >
                   <ChevronLeft className="h-4 w-4" />
                   <span>Back</span>
                 </button>
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 rounded-lg bg-[#c4a47c] px-7 py-3 text-xs font-semibold uppercase tracking-wider text-[#12100e] hover:bg-[#dfcaa8] transition-all shadow-[0_0_20px_rgba(196,164,124,0.25)]"
+                  className="w-full sm:w-auto justify-center inline-flex items-center gap-2 rounded-lg bg-[#c4a47c] px-7 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#12100e] hover:bg-[#dfcaa8] transition-all shadow-[0_0_20px_rgba(196,164,124,0.25)] active:scale-98"
                 >
                   <span>{t.booking.submitQuote}</span>
                 </button>

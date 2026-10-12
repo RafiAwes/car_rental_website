@@ -38,8 +38,10 @@ export const FloatingWhatsApp: React.FC = () => {
 
   return (
     <div
-      className={`fixed bottom-6 z-40 flex items-center gap-3 ${
-        dir === 'rtl' ? 'left-6 flex-row-reverse' : 'right-6'
+      className={`fixed bottom-4 sm:bottom-6 z-40 flex items-center gap-3 ${
+        dir === 'rtl'
+          ? 'left-4 sm:left-6 right-auto flex-row-reverse'
+          : 'right-4 sm:right-6 left-auto'
       }`}
     >
       {/* Expandable info card on hover or click */}
@@ -82,7 +84,7 @@ export const FloatingWhatsApp: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         onMouseEnter={() => setShowTooltip(true)}
-        className="group relative flex items-center gap-2.5 rounded-full border border-[#25D366]/40 bg-[#161311]/95 px-4 py-3 text-xs font-medium text-white shadow-[0_10px_30px_rgba(0,0,0,0.6)] backdrop-blur-md hover:border-[#25D366] hover:bg-[#1f1b18] hover:scale-105 transition-all duration-200"
+        className="group relative flex items-center gap-2.5 rounded-full border border-[#25D366]/40 bg-[#161311]/95 p-2.5 sm:px-4 sm:py-3 text-xs font-medium text-white shadow-[0_10px_30px_rgba(0,0,0,0.6)] backdrop-blur-md hover:border-[#25D366] hover:bg-[#1f1b18] hover:scale-105 transition-all duration-200"
         aria-label="Contact Driveo Exclusive on WhatsApp"
       >
         {/* WhatsApp Icon with Brand Color */}

@@ -57,7 +57,7 @@ export const FlightTrackerDemo: React.FC = () => {
           </div>
 
           {/* Search box */}
-          <form onSubmit={handleSearch} className="flex items-center gap-2 max-w-md w-full">
+          <form onSubmit={handleSearch} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 max-w-md w-full">
             <div className="relative flex-1">
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#b8b1a5]" />
               <input
@@ -70,7 +70,7 @@ export const FlightTrackerDemo: React.FC = () => {
             </div>
             <button
               type="submit"
-              className="rounded-lg bg-[#c4a47c] px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#12100e] hover:bg-[#dfcaa8]"
+              className="rounded-lg bg-[#c4a47c] px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#12100e] hover:bg-[#dfcaa8] transition-colors justify-center flex items-center"
             >
               Track
             </button>

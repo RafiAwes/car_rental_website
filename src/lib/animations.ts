@@ -64,9 +64,16 @@ export const observeAndReveal = (
   };
 };
 
-// 3D Card Tilt Effect for luxury fleet cards
+// 3D Card Tilt Effect for luxury fleet cards (desktop pointer devices only)
 export const attach3DCardTilt = (element: HTMLElement) => {
-  if (prefersReducedMotion() || !element) return () => {};
+  if (
+    prefersReducedMotion() ||
+    !element ||
+    typeof window === 'undefined' ||
+    !window.matchMedia('(hover: hover) and (pointer: fine)').matches
+  ) {
+    return () => {};
+  }
 
   let bounds: DOMRect;
 

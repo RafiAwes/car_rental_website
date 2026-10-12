@@ -143,7 +143,7 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Headline with balance */}
-          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal tracking-tight text-white leading-[1.08] [text-wrap:balance]">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight text-white leading-[1.1] [text-wrap:balance]">
             <span ref={headingLine1Ref} className="block text-[#b8b1a5] font-light">
               {t.hero.titleLine1}
             </span>
@@ -155,19 +155,19 @@ export const Hero: React.FC = () => {
           {/* Subtitle */}
           <p
             ref={subtitleRef}
-            className="mt-8 max-w-3xl text-base sm:text-lg text-[#b8b1a5] leading-relaxed font-light"
+            className="mt-6 sm:mt-8 max-w-3xl text-sm sm:text-base md:text-lg text-[#b8b1a5] leading-relaxed font-light"
           >
             {t.hero.subtitle}
           </p>
 
-          {/* Action CTAs */}
-          <div ref={ctaGroupRef} className="mt-10 flex flex-wrap items-center gap-5">
+          {/* Action CTAs - Responsive Stacking */}
+          <div ref={ctaGroupRef} className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
             <button
               onClick={() => {
                 setActivePage('booking');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="inline-flex items-center gap-3 rounded-lg bg-[#c4a47c] px-7 py-3.5 text-xs font-semibold uppercase tracking-widest text-[#12100e] hover:bg-[#dfcaa8] transition-all duration-200 active:scale-98 shadow-[0_0_30px_rgba(196,164,124,0.25)] hover:shadow-[0_0_40px_rgba(196,164,124,0.4)] hover:-translate-y-0.5"
+              className="w-full sm:w-auto justify-center inline-flex items-center gap-3 rounded-lg bg-[#c4a47c] px-6 sm:px-7 py-3.5 text-xs font-semibold uppercase tracking-widest text-[#12100e] hover:bg-[#dfcaa8] transition-all duration-200 active:scale-98 shadow-[0_0_30px_rgba(196,164,124,0.25)] hover:shadow-[0_0_40px_rgba(196,164,124,0.4)] hover:-translate-y-0.5"
             >
               <span>{t.hero.ctaPrimary}</span>
               <ArrowDownRight className="h-4 w-4" />
@@ -178,7 +178,7 @@ export const Hero: React.FC = () => {
                 setActivePage('fleet');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 backdrop-blur-sm px-6 py-3.5 text-xs font-medium uppercase tracking-widest text-[#f4efe6] hover:bg-white/10 hover:border-white/30 transition-all duration-200 hover:-translate-y-0.5"
+              className="w-full sm:w-auto justify-center inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 backdrop-blur-sm px-6 py-3.5 text-xs font-medium uppercase tracking-widest text-[#f4efe6] hover:bg-white/10 hover:border-white/30 transition-all duration-200 hover:-translate-y-0.5"
             >
               <span>{t.hero.ctaSecondary}</span>
             </button>
